@@ -21,6 +21,9 @@ RUN npm install --production \
 
 # Create actual CryptPad image
 FROM node:lts-slim
+
+LABEL maintainer="Michael Schmidt <schmidt.software@gmail.com>"
+
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt install -y git rdfind && rm -rf /var/lib/apt/lists/*
 
